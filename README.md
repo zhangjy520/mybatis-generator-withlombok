@@ -22,7 +22,7 @@ public class TestTable implements Serializable {
     private String name = "dadasda";
 
     @Builder.Default
-    private String password = 123;
+    private int password = 123;
 
     private byte[] content;
 
