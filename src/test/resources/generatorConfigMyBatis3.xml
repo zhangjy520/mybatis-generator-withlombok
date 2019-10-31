@@ -46,15 +46,10 @@
 
     <!-- 数据库连接信息 -->
     <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
-                    connectionURL="jdbc:oracle:thin:@10.8.218.218:1521:orcl"
-                    userId="jplmuser"
-                    password="tyinteplm">
+                    connectionURL="jdbc:oracle:thin:@******:orcl"
+                    userId="*******"
+                    password="*******">
     </jdbcConnection>
-    <!--<jdbcConnection driverClass="com.huawei.gauss.jdbc.ZenithDriver"
-                    connectionURL="jdbc:zenith:@10.8.18.23:1888"
-                    userId="tytest"
-                    password="123qwe!@#">
-    </jdbcConnection>-->
 
     <!-- 生成的model 包路径 -->
     <javaModelGenerator targetPackage="com.ty.adapter.entity" targetProject="C:\\Users\\dell\\Desktop\\exec">
@@ -83,72 +78,6 @@
        <defaultValue columnName="password" columnValue="123" dataType="int"/>
        <defaultValue columnName="name" columnValue="dadasda" dataType="String"/>
      </table>
-    <table schema="jplmuser" tableName="zddw_part"
-           domainObjectName="ZddwPart" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGACTIVITYMASTER"
-           domainObjectName="ChgActivityMasterDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGACTRECORDLINK"
-           domainObjectName="ChgActRecordLinkDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGACTRELDATALINK"
-           domainObjectName="ChgActRelDataLinkDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGNOTICE" domainObjectName="ChgNoticeDO"
-           enableCountByExample="false" enableUpdateByExample="false"
-           enableDeleteByExample="false" enableSelectByExample="false"
-           selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGNOTICEACTIVITYLINK"
-           domainObjectName="ChgNoticeActivityLinkDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGNOTICEMASTER"
-           domainObjectName="ChgNoticeMasterDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGREQRELDATALINK"
-           domainObjectName="ChgReqRelDataLinkDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGREQUEST"
-           domainObjectName="ChgRequestDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGREQUESTMASTER"
-           domainObjectName="ChgRequestMasterDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
-    <table schema="tytest" tableName="TY_CHGREQUESTNOTICELINK"
-           domainObjectName="ChgRequestNoticeLinkDO" enableCountByExample="false"
-           enableUpdateByExample="false" enableDeleteByExample="false"
-           enableSelectByExample="false" selectByExampleQueryId="false">
-      <property name="useActualColumnNames" value="false" />
-    </table>
 
   </context>
 </generatorConfiguration>
