@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!-- 配置文件路径 -->
+
+  <!-- 数据库驱动包路径 -->
+  <classPathEntry location="D:\\zjywork\\code\\JZDDW\\src\\javaProCode\\WebFoundation\\WebContent\\WEB-INF\\lib\\ojdbc6.jar"/>
+  <!--<classPathEntry location="D:\zjywork\code\JZDDW\src\javaProCode_branchHuaWei_latest\WebFoundation\WebContent\WEB-INF\lib\com.huawei.gauss.jdbc.ZenithDriver-GaussDB_100_1.0.0.B019.jar"/>-->
+
+  <context id="MySQLTables" targetRuntime="MyBatis3">
+    <!-- 抑制警告 -->
+    <property name="suppressTypeWarnings" value="true" />
+
+    <!-- generate entity时，生成hashcode和equals方法 -->
+    <!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />-->
+    <!-- generate entity时，生成serialVersionUID -->
+    <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+    <!-- 这个插件只会增加字符串字段映射到一个JDBC字符的方法 -->
+    <!--<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />-->
+    <!-- genenat entity时,生成toString -->
+    <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />-->
+
+    <!-- 整合lombok-->
+    <plugin type="org.mybatis.generator.plugins.LombokPlugin" >
+      <property name="hasLombok" value="true"/>
+    </plugin>
+
+    <!-- 自定义的注释生成插件-->
+   <!-- <plugin type="org.mybatis.generator.plugins.CommentPlugin">
+      &lt;!&ndash; 抑制警告 &ndash;&gt;
+      <property name="suppressTypeWarnings" value="true" />
+      &lt;!&ndash; 是否去除自动生成的注释 true：是 ： false:否 &ndash;&gt;
+      <property name="suppressAllComments" value="false" />
+      &lt;!&ndash; 是否生成注释代时间戳&ndash;&gt;
+      <property name="suppressDate" value="true" />
+    </plugin>-->
+
+    <!-- 抑制生成代码的注释 -->
+    <commentGenerator>
+      <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+
+
+    <!-- 数据库连接信息 -->
+    <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+                    connectionURL="jdbc:oracle:thin:@10.8.218.218:1521:orcl"
+                    userId="jplmuser"
+                    password="tyinteplm">
+    </jdbcConnection>
+    <!--<jdbcConnection driverClass="com.huawei.gauss.jdbc.ZenithDriver"
+                    connectionURL="jdbc:zenith:@10.8.18.23:1888"
+                    userId="tytest"
+                    password="123qwe!@#">
+    </jdbcConnection>-->
+
+    <!-- 生成的model 包路径 -->
+    <javaModelGenerator targetPackage="com.ty.adapter.entity" targetProject="C:\\Users\\dell\\Desktop\\exec">
+      <property name="enableSubPackages" value="ture"/>
+      <property name="trimStrings" value="true"/>
+    </javaModelGenerator>
+
+    <!-- 生成xml mapper文件 路径 -->
+    <sqlMapGenerator targetPackage="com.ty.adapter.mapping" targetProject="C:\\Users\\dell\\Desktop\\exec">
+      <property name="enableSubPackages" value="ture"/>
+    </sqlMapGenerator>
+
+    <!-- 生成的Dao接口 的包路径 -->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.ty.adapter.dao" targetProject="C:\\Users\\dell\\Desktop\\exec">
+      <property name="enableSubPackages" value="ture"/>
+    </javaClientGenerator>
+
+    <!-- 下面是需要我们写的 -->
+     <table schema="jplmuser" tableName="testtable" domainObjectName="TestTable"
+            enableCountByExample="false"
+            enableUpdateByExample="false"
+            enableDeleteByExample="false"
+            enableSelectByExample="false"
+            selectByExampleQueryId="false">
+       <property name="useActualColumnNames" value="false"/>
+       <defaultValue columnName="password" columnValue="123" dataType="int"/>
+       <defaultValue columnName="name" columnValue="dadasda" dataType="String"/>
+     </table>
+    <table schema="jplmuser" tableName="zddw_part"
+           domainObjectName="ZddwPart" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGACTIVITYMASTER"
+           domainObjectName="ChgActivityMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGACTRECORDLINK"
+           domainObjectName="ChgActRecordLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGACTRELDATALINK"
+           domainObjectName="ChgActRelDataLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGNOTICE" domainObjectName="ChgNoticeDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGNOTICEACTIVITYLINK"
+           domainObjectName="ChgNoticeActivityLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGNOTICEMASTER"
+           domainObjectName="ChgNoticeMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGREQRELDATALINK"
+           domainObjectName="ChgReqRelDataLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGREQUEST"
+           domainObjectName="ChgRequestDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGREQUESTMASTER"
+           domainObjectName="ChgRequestMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="tytest" tableName="TY_CHGREQUESTNOTICELINK"
+           domainObjectName="ChgRequestNoticeLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+
+  </context>
+</generatorConfiguration>
