@@ -137,7 +137,7 @@ public class LombokPlugin extends PluginAdapter {
             }
         }
         for (DefaultValue defaultValue : introspectedTable.getTableConfiguration().getDefaultValues()) {
-            if (defaultValue.getColumnName().equals(field.getName())) {
+            if (defaultValue.getColumnName().toUpperCase().equals(field.getName().toUpperCase())) {
                 String name = field.getName();
                 if ("String".equals(defaultValue.getDataType())) {
                     name = field.getName() + " = " + "\"" + defaultValue.getColumnValue() + "\"";

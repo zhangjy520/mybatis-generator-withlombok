@@ -251,66 +251,154 @@
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="adhocacluserotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="cabinteotype" columnValue="ty.inteplm.folder.CTyCabinet" dataType="String"/>
+      <defaultValue columnName="projectotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="teamotype" columnValue="ty.inteplm.org.CTyTeamTemplate" dataType="String"/>
+      <defaultValue columnName="teamtemplateotype" columnValue="ty.inteplm.org.CTyTeamTemplate" dataType="String"/>
+      <defaultValue columnName="usera7otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="userb7otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="masteredotype" columnValue="ty.inteplm.change.CTyChangeActivityMaster" dataType="String"/>
+      <defaultValue columnName="sourceiterationotype" columnValue="ty.inteplm.change.CTyChangeActivity" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeActivity" dataType="String"/>
+      <defaultValue columnName="typeotype" columnValue="ty.inteplm.type.CTyTypeDef" dataType="String"/>
+      <defaultValue columnName="lifecycletemplateotype" columnValue="ty.inteplm.lifecycle.CTyLifecycleTemplate" dataType="String"/>
+      <defaultValue columnName="lifecyclestageotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="containerotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="domainotype" columnValue="ty.inteplm.domain.CTyDomain" dataType="String"/>
+      <defaultValue columnName="creatorotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="ownerotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="updatorotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGACTIVITYMASTER"
            domainObjectName="ChgActivityMasterDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="orgotype" columnValue="ty.inteplm.org.CTyOrg" dataType="String"/>
+      <defaultValue columnName="defaultiteratedotype" columnValue="ty.inteplm.change.CTyChangeActivity" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeActivityMaster" dataType="String"/>
+      <defaultValue columnName="containerotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGACTRECORDLINK"
            domainObjectName="ChgActRecordLinkDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="aotype" columnValue="ty.inteplm.change.CTyChangeActivity" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeActRecordLink" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGACTRELDATALINK"
            domainObjectName="ChgActRelDataLinkDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="aotype" columnValue="ty.inteplm.change.CTyChangeActivity" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeActRelDataLink" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGNOTICE" domainObjectName="ChgNoticeDO"
            enableCountByExample="false" enableUpdateByExample="false"
            enableDeleteByExample="false" enableSelectByExample="false"
            selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="adhocacluserotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="cabinetotype" columnValue="ty.inteplm.folder.CTyCabinet" dataType="String"/>
+      <defaultValue columnName="orgotype" columnValue="ty.inteplm.org.CTyOrg" dataType="String"/>
+      <defaultValue columnName="projectotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="resourcecategoryotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="teamotype" columnValue="ty.inteplm.org.CTyTeamTemplate" dataType="String"/>
+      <defaultValue columnName="teamteamplateotype" columnValue="ty.inteplm.org.CTyTeamTemplate" dataType="String"/>
+      <defaultValue columnName="usera7otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="userb7otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="masteredotype" columnValue="ty.inteplm.change.CTyChangeNoticeMaster" dataType="String"/>
+      <defaultValue columnName="sourceiterationotype" columnValue="ty.inteplm.change.CTyChangeNotice" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeNotice" dataType="String"/>
+      <defaultValue columnName="typeotype" columnValue="ty.inteplm.type.CTyTypeDef" dataType="String"/>
+      <defaultValue columnName="lifecycletemplateotype" columnValue="ty.inteplm.lifecycle.CTyLifeCycleStageTemplate" dataType="String"/>
+      <defaultValue columnName="lifecyclestageotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="subfolderotype" columnValue="ty.inteplm.folder.CTySubFolder" dataType="String"/>
+      <defaultValue columnName="appdomainrefotype" columnValue="ty.inteplm.domain.CTyDomain" dataType="String"/>
+      <defaultValue columnName="containerotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="creatorotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="updatorotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGNOTICEACTIVITYLINK"
            domainObjectName="ChgNoticeActivityLinkDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="aotype" columnValue="ty.inteplm.change.CTyChangeNotice" dataType="String"/>
+      <defaultValue columnName="botype" columnValue="ty.inteplm.change.CTyChangeActivity" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeNoticeActivityLink" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGNOTICEMASTER"
            domainObjectName="ChgNoticeMasterDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="orgotype" columnValue="ty.inteplm.org.CTyOrg" dataType="String"/>
+      <defaultValue columnName="defaultiteratedotype" columnValue="ty.inteplm.change.CTyChangeNotice" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeNoticeMaster" dataType="String"/>
+      <defaultValue columnName="containerotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGREQRELDATALINK"
            domainObjectName="ChgReqRelDataLinkDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
-    </table>
+      <defaultValue columnName="aotype" columnValue="ty.inteplm.change.CTyChangeRequest" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeRequestRelDataLink" dataType="String"/>
+     </table>
     <table schema="HWPDM" tableName="TY_CHGREQUEST"
            domainObjectName="ChgRequestDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="adhocacluserotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="cabinetotype" columnValue="ty.inteplm.folder.CTyCabinet" dataType="String"/>
+      <defaultValue columnName="containerotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="folderinfootype" columnValue="ty.inteplm.folder.CTySubFolder" dataType="String"/>
+      <defaultValue columnName="orgotype" columnValue="ty.inteplm.org.CTyOrg" dataType="String"/>
+      <defaultValue columnName="projectotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="resourcecategoryotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="teamotype" columnValue="ty.inteplm.org.CTyTeamTemplate" dataType="String"/>
+      <defaultValue columnName="teamtemplateotype" columnValue="ty.inteplm.org.CTyTeamTemplate" dataType="String"/>
+      <defaultValue columnName="usera7otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="usera9otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="userb7otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="userb9otype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="masteredotype" columnValue="ty.inteplm.change.CTyChangeRequestMaster" dataType="String"/>
+      <defaultValue columnName="sourceiterationotype" columnValue="ty.inteplm.change.CTyChangeRequest" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeRequest" dataType="String"/>
+      <defaultValue columnName="typeotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="lifecycletemplateotype" columnValue="ty.inteplm.lifecycle.CTyLifecycleTemplate" dataType="String"/>
+      <defaultValue columnName="lifecyclestageotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
+      <defaultValue columnName="subfolderotype" columnValue="ty.inteplm.folder.CTySubFolder" dataType="String"/>
+      <defaultValue columnName="appdomainrefotype" columnValue="ty.inteplm.domain.CTyDomain" dataType="String"/>
+      <defaultValue columnName="domainotype" columnValue="ty.inteplm.domain.CTyDomain" dataType="String"/>
+      <defaultValue columnName="creatorotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="ownerotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
+      <defaultValue columnName="updatorotype" columnValue="ty.inteplm.org.CTyUser" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGREQUESTMASTER"
            domainObjectName="ChgRequestMasterDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="orgotype" columnValue="ty.inteplm.org.CTyOrg" dataType="String"/>
+      <defaultValue columnName="defaultiteratedotype" columnValue="ty.inteplm.change.CTyChangeRequest" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeRequestMaster" dataType="String"/>
+      <defaultValue columnName="containerotype" columnValue="ty.zddw.kernel.CTyReferenceBase" dataType="String"/>
     </table>
     <table schema="HWPDM" tableName="TY_CHGREQUESTNOTICELINK"
            domainObjectName="ChgRequestNoticeLinkDO" enableCountByExample="false"
            enableUpdateByExample="false" enableDeleteByExample="false"
            enableSelectByExample="false" selectByExampleQueryId="false">
       <property name="useActualColumnNames" value="false" />
+      <defaultValue columnName="aotype" columnValue="ty.inteplm.change.CTyChangeRequest" dataType="String"/>
+      <defaultValue columnName="botype" columnValue="ty.inteplm.change.CTyChangeNotice" dataType="String"/>
+      <defaultValue columnName="otype" columnValue="ty.inteplm.change.CTyChangeRequestNoticeLink" dataType="String"/>
+
     </table>
     <!--<table schema="HWPDM" tableName="TY_CLASSIFICATION"
            domainObjectName="ClassiFiCationDO" enableCountByExample="false"
