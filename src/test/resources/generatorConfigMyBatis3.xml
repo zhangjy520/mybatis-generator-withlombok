@@ -46,9 +46,9 @@
 
     <!-- 数据库连接信息 -->
     <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
-                    connectionURL="jdbc:oracle:thin:@******:orcl"
-                    userId="*******"
-                    password="*******">
+                    connectionURL="jdbc:oracle:thin:@10.8.218.218:1521:orcl"
+                    userId="jplmuser"
+                    password="tyinteplm">
     </jdbcConnection>
 
     <!-- 生成的model 包路径 -->
@@ -78,6 +78,816 @@
        <defaultValue columnName="password" columnValue="123" dataType="int"/>
        <defaultValue columnName="name" columnValue="dadasda" dataType="String"/>
      </table>
+    <!--<table schema="HWPDM" tableName="TYV_CONTENTDATA"
+           domainObjectName="ContentDataDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_DUPFOLDER"
+           domainObjectName="DupFolderDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_DUPITEM" domainObjectName="DupItemDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_DUPVAULT" domainObjectName="DupVaultDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_FILEVAULT"
+           domainObjectName="FileVaultDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_OBJCONTENTLINK"
+           domainObjectName="ObjContentLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_ROOTMOUNT"
+           domainObjectName="RootMountDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_VAULTFOLDER"
+           domainObjectName="VaultFolderDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_VAULTHOST"
+           domainObjectName="VaultThostDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_VAULTITEM"
+           domainObjectName="VaultItemDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_VAULTMOUNT"
+           domainObjectName="VaultMountDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TYV_VAULTROOTFOLDER"
+           domainObjectName="VaultRootFolderDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ACCESSOBJRIGHT"
+           domainObjectName="AccessObjRightDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ACCESSPOLICY"
+           domainObjectName="AccessPolicyDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ACCESSPOLICYRULE"
+           domainObjectName="AccessPolicyRuleDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ATTRIBUTEGROUP"
+           domainObjectName="AttributeGroupDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_BASELINE" domainObjectName="BaseLineDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_BASELINEMEMBER"
+           domainObjectName="BaseLineMemberDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_BASICCONSTRAINT"
+           domainObjectName="BasicConstraintDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_BOOLEANDEF"
+           domainObjectName="BooleanDefDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_BOOLEANVALUE"
+           domainObjectName="BooleanValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CABINET" domainObjectName="CabinetDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CALENDAR" domainObjectName="CalendarDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CALENDARITEM"
+           domainObjectName="CalendarItemDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CALENDARITEMLINK"
+           domainObjectName="CalendarItemLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHANGEISSUE"
+           domainObjectName="ChangeIssueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHANGEISSUEMASTER"
+           domainObjectName="ChangeIssueMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>-->
+   <!-- <table schema="HWPDM" tableName="TY_CHECKOUTLINK"
+           domainObjectName="CheckOutLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>-->
+    <table schema="HWPDM" tableName="TY_CHGACTIVITY"
+           domainObjectName="ChgActivityDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGACTIVITYMASTER"
+           domainObjectName="ChgActivityMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGACTRECORDLINK"
+           domainObjectName="ChgActRecordLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGACTRELDATALINK"
+           domainObjectName="ChgActRelDataLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGNOTICE" domainObjectName="ChgNoticeDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGNOTICEACTIVITYLINK"
+           domainObjectName="ChgNoticeActivityLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGNOTICEMASTER"
+           domainObjectName="ChgNoticeMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGREQRELDATALINK"
+           domainObjectName="ChgReqRelDataLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGREQUEST"
+           domainObjectName="ChgRequestDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGREQUESTMASTER"
+           domainObjectName="ChgRequestMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CHGREQUESTNOTICELINK"
+           domainObjectName="ChgRequestNoticeLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <!--<table schema="HWPDM" tableName="TY_CLASSIFICATION"
+           domainObjectName="ClassiFiCationDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CLASSIFICATIONFIELD"
+           domainObjectName="ClassiFiCationFieldDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CLASSIFICATIONMAPPING"
+           domainObjectName="ClassiFiCationMappingDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CLASSIFICATIONNAVSTRUCT"
+           domainObjectName="ClassiFiCationNavStructDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CLASSIFICATIONROOT"
+           domainObjectName="ClassiFiCationRootDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONFIGURABLEDESCRIBELINK"
+           domainObjectName="ConfigurableDescribelinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONFIGURABLEMASTERSLINK"
+           domainObjectName="ConfigurableMastersLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONFIGURABLEREFLINK"
+           domainObjectName="ConfigurableRefLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONSTRAINTCONTAINER"
+           domainObjectName="ConstraintContainerDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONTAINERTEAM"
+           domainObjectName="ContainerTeamDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONTAINERTEMPLATE"
+           domainObjectName="ContainerTemplateDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONTAINERTEMPLATEMASTER"
+           domainObjectName="ContainerTemplateMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CONTROLBRANCH"
+           domainObjectName="ControlBranchDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_CSMSINGLEDEFCONSTRAINT"
+           domainObjectName="CsmSingleDefConstraintDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DATAFORMAT"
+           domainObjectName="DataFormatDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DATEDEFFECTIVITY"
+           domainObjectName="DateDeffectivityDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DOC" domainObjectName="DocDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DOCDEPENDENCYLINK"
+           domainObjectName="DocdependencyLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DOCMASTER" domainObjectName="DocMasterDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DOCUMENTMASTERKEY"
+           domainObjectName="DocumentMasterKeyDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DOCUSAGELINK"
+           domainObjectName="DocUsageLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_DOMAIN" domainObjectName="TyDomainDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_EFFECTIVITYINFO"
+           domainObjectName="EffectivityInfoDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ENUMERATIONDEF"
+           domainObjectName="EnumerationDefDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ENUMERATIONGROUP"
+           domainObjectName="EnumerationGroupDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ENUMERATIONITEM"
+           domainObjectName="EnumerationItemDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ENUMERATIONITEMLINK"
+           domainObjectName="EnumerationTeamLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_FLOATDEF" domainObjectName="FloatDefDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_FLOATVALUE"
+           domainObjectName="FloatValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_FOLDERMEMBERLINK"
+           domainObjectName="FolderMemberLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_GROUP" domainObjectName="GroupDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_INTEGERDEF"
+           domainObjectName="IntegerDefDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_INTEGERVALUE"
+           domainObjectName="IntegerValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIBRARY" domainObjectName="LibraryDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIFECYCLEHISTORY"
+           domainObjectName="LifeCycleHistoryDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIFECYCLESIGNATURE"
+           domainObjectName="LifeCycleSignNatureDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIFECYCLESTAGE"
+           domainObjectName="LifeCycleStageDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIFECYCLESTAGELINK"
+           domainObjectName="LifeCycleStageLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIFECYCLESTAGETEMPLATE"
+           domainObjectName="LifeCycleStageTemplateDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIFECYCLETEMPLATE"
+           domainObjectName="LifeCycleTemplateDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LIFECYCLETEMPLATEMASTER"
+           domainObjectName="LifeCycleTemplateMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_LOCALEPROPERTYVALUE"
+           domainObjectName="LocalePropertyValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MADEFROMLINK"
+           domainObjectName="MaDefRomLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MANUFACTURE"
+           domainObjectName="ManufactureDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MANUFACTUREPART"
+           domainObjectName="ManufacturePartDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MANUFACTUREPARTMASTER"
+           domainObjectName="ManufacturePartMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MASTEREDONREPLICAITEM"
+           domainObjectName="MasterEnonReplicaItemDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MEASUREMENTSYSTEM"
+           domainObjectName="MeasureMentSystemDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MEMBERLINK"
+           domainObjectName="MemberLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MPNPARTCONTEXT"
+           domainObjectName="MpnPartContextDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_MPNPARTLINK"
+           domainObjectName="MpnPartLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ORG" domainObjectName="Org"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ORGCONTAINER"
+           domainObjectName="OrgContainerDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PART" domainObjectName="Part"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PARTALTERLINK"
+           domainObjectName="PartAlterLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PARTDESCRIBELINK"
+           domainObjectName="PartDescribeLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PARTMASTER"
+           domainObjectName="PartMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PARTREFERENCELINK"
+           domainObjectName="PartReferenceLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PARTSUBSTITUTELINK"
+           domainObjectName="PartSubstituteLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PARTUSAGELINK"
+           domainObjectName="PartUsageLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PARTUSESOCCURRENCE"
+           domainObjectName="PartUsesOccurrenceDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_PDMLINKPRODUCT"
+           domainObjectName="PdmLinkProductDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_POLICYACL" domainObjectName="PolicyaclDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_QUANTITYOFMEASURE"
+           domainObjectName="QuantityOfMeasureDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_REFERENCEDEF"
+           domainObjectName="ReferenceDefDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_REFERENCEVALUE"
+           domainObjectName="ReferenceDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_REMOTEOBJECTID"
+           domainObjectName="RemoteObjEctIdDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_REMOTEOBJECTINFO"
+           domainObjectName="RemoteObjEctInfoDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ROLE" domainObjectName="Role"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_ROLEPRINCIPALMAP"
+           domainObjectName="RolePrincipalMapDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SERIESSORTVALUE"
+           domainObjectName="SeriesSortValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SERIESTEMPLATE"
+           domainObjectName="SeriesTemplateDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SHAREDCONTAINERMAP"
+           domainObjectName="SharedContainerMapDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SITE" domainObjectName="Site"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SITECONTAINER"
+           domainObjectName="SiteContainerDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SITESECURITY"
+           domainObjectName="SiteSecurityDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SITETOSITEPRINCIPALLINK"
+           domainObjectName="SiteToSitePrincipalLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_STATUSDEF" domainObjectName="StatusDefDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_STATUSVALUE"
+           domainObjectName="StatusValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_STRINGDEF" domainObjectName="StringDefDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_STRINGVALUE"
+           domainObjectName="StringValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SUBFOLDER" domainObjectName="SubfolderDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SUBFOLDERCONSTRAINT"
+           domainObjectName="SubfolderConstraintDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_SUBFOLDERLINK"
+           domainObjectName="SubfolderLinkDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_TEAM" domainObjectName="Team"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_TEAMTEMPLATE"
+           domainObjectName="TeamTeamplateDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_TIMESTAMPDEF"
+           domainObjectName="TimeStampDefDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_TIMESTAMPVALUE"
+           domainObjectName="TimeStampValueDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_TYPE" domainObjectName="Type"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_TYPEMASTER"
+           domainObjectName="TypeMasterDO" enableCountByExample="false"
+           enableUpdateByExample="false" enableDeleteByExample="false"
+           enableSelectByExample="false" selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_UNITDEF" domainObjectName="UnitDefDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_UNITVALUE" domainObjectName="UnitValueDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_URLDEF" domainObjectName="UrlDefDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_URLVALUE" domainObjectName="UrlValueDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_USER" domainObjectName="User"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>
+    <table schema="HWPDM" tableName="TY_VIEWDEF" domainObjectName="ViewDefDO"
+           enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"
+           selectByExampleQueryId="false">
+      <property name="useActualColumnNames" value="false" />
+    </table>-->
 
   </context>
 </generatorConfiguration>
