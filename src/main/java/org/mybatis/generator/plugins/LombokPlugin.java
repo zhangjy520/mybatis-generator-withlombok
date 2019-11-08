@@ -9,7 +9,10 @@ import org.mybatis.generator.api.dom.java.Method;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 import org.mybatis.generator.config.DefaultValue;
 
+import java.util.Arrays;
 import java.util.List;
+
+import static java.util.Arrays.asList;
 
 /**
  * @author zjy
@@ -22,12 +25,15 @@ public class LombokPlugin extends PluginAdapter {
     private FullyQualifiedJavaType idAnnotation;
     private FullyQualifiedJavaType tableAnnotation;
     private FullyQualifiedJavaType defaultAnnotation;
+    private FullyQualifiedJavaType dateAnnotation;
+    private List defatultTimeField = asList("createstamp", "updatestamp", "modifystamp");
 
     public LombokPlugin() {
         dataAnnotation = new FullyQualifiedJavaType("lombok.Data");
         idAnnotation = new FullyQualifiedJavaType("javax.persistence.Id");
         tableAnnotation = new FullyQualifiedJavaType("javax.persistence.Table");
         defaultAnnotation = new FullyQualifiedJavaType("lombok.Builder");
+        dateAnnotation = new FullyQualifiedJavaType("java.util.Date");
     }
 
     @Override
@@ -46,7 +52,7 @@ public class LombokPlugin extends PluginAdapter {
     public boolean modelBaseRecordClassGenerated(TopLevelClass topLevelClass,
                                                  IntrospectedTable introspectedTable) {
         addDataAnnotation(topLevelClass);
-        addTableAnnotation(topLevelClass,introspectedTable.getTableConfiguration().getTableName());
+        addTableAnnotation(topLevelClass, introspectedTable.getTableConfiguration().getTableName());
         return true;
     }
 
@@ -120,24 +126,31 @@ public class LombokPlugin extends PluginAdapter {
 
     @Override
     public boolean modelFieldGenerated(Field field, TopLevelClass topLevelClass, IntrospectedColumn introspectedColumn, IntrospectedTable introspectedTable, ModelClassType modelClassType) {
-        if (introspectedColumn.getIntrospectedTable().getPrimaryKeyColumns().contains(introspectedColumn)){
-          addPrimaryAnnotation(field,topLevelClass);
-       }
-        for (DefaultValue defaultValue :introspectedTable.getTableConfiguration().getDefaultValues()) {
-            if (defaultValue.getColumnName().equals(field.getName())){
+        if (introspectedColumn.getIntrospectedTable().getPrimaryKeyColumns().contains(introspectedColumn)) {
+            addPrimaryAnnotation(field, topLevelClass);
+        }
+        if ("java.util.Date".equals(field.getType().getFullyQualifiedName())) {
+            addDefaultDateValueAnnotation(field,topLevelClass);
+            addDefaultValueAnnotation(field, topLevelClass);
+            if (defatultTimeField.contains(field.getName().toLowerCase())){
+                    field.setName(field.getName()+" = " +"new Date()");
+            }
+        }
+        for (DefaultValue defaultValue : introspectedTable.getTableConfiguration().getDefaultValues()) {
+            if (defaultValue.getColumnName().equals(field.getName())) {
                 String name = field.getName();
-                if ("String".equals(defaultValue.getDataType())){
-                    name = field.getName()+" = "+"\""+defaultValue.getColumnValue()+"\"";
-                }else if ("int".equals(defaultValue.getDataType())){
+                if ("String".equals(defaultValue.getDataType())) {
+                    name = field.getName() + " = " + "\"" + defaultValue.getColumnValue() + "\"";
+                } else if ("int".equals(defaultValue.getDataType())) {
                     //数字不操作
-                    name = field.getName()+" = "+defaultValue.getColumnValue();
+                    name = field.getName() + " = " + defaultValue.getColumnValue();
                 }
 
-                addDefaultValueAnnotation(field,topLevelClass);
+                addDefaultValueAnnotation(field, topLevelClass);
                 field.setName(name);
             }
         }
-       return true;
+        return true;
     }
 
     /**
@@ -151,7 +164,7 @@ public class LombokPlugin extends PluginAdapter {
     /**
      * Adds the @ID lombok import and annotation to the class
      */
-    protected void addPrimaryAnnotation(Field field,TopLevelClass topLevelClass) {
+    protected void addPrimaryAnnotation(Field field, TopLevelClass topLevelClass) {
         topLevelClass.addImportedType(idAnnotation);
         field.addAnnotation("@Id");
     }
@@ -159,17 +172,22 @@ public class LombokPlugin extends PluginAdapter {
     /**
      * Adds the @ID lombok import and annotation to the class
      */
-    protected void addDefaultValueAnnotation(Field field,TopLevelClass topLevelClass) {
+    protected void addDefaultValueAnnotation(Field field, TopLevelClass topLevelClass) {
         topLevelClass.addImportedType(defaultAnnotation);
         field.addAnnotation("@Builder.Default");
     }
 
+    protected void addDefaultDateValueAnnotation(Field field, TopLevelClass topLevelClass) {
+        topLevelClass.addImportedType(dateAnnotation);
+    }
+
+
     /**
      * Adds the @Table lombok import and annotation to the class
      */
-    protected void addTableAnnotation(TopLevelClass topLevelClass,String tableName) {
+    protected void addTableAnnotation(TopLevelClass topLevelClass, String tableName) {
         topLevelClass.addImportedType(tableAnnotation);
-        topLevelClass.addAnnotation("@Table(name = \""+tableName+"\")");
+        topLevelClass.addAnnotation("@Table(name = \"" + tableName + "\")");
     }
 
 }
